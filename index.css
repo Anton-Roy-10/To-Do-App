@@ -1,0 +1,320 @@
+/* -----------Custom Properties------------------ */
+:root {
+  --ff-body: "Helvetica", sans-serif;
+}
+
+/*----------------- Box sizing -----------------*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* --------------------Reset margins----------------------- */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+span,
+img {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+label,
+p {
+  font-weight: 400;
+}
+
+/*-------------------Fonts-------------*/
+
+body {
+  font-family: var(--ff-body);
+  position: relative;
+  /* line-height: 1.5; */
+}
+
+h1 {
+  font-weight: 600;
+  font-size: 3rem;
+}
+
+img {
+  height: 2em;
+  aspect-ratio: 1;
+}
+
+/* ---------------container---------------- */
+
+.container {
+  display: grid;
+}
+
+.container div {
+  text-align: center;
+}
+
+/* ------------------Heading------------- */
+.heading {
+  padding: 40px;
+}
+
+/* ---------------------add-select-components----------------- */
+
+input {
+  /* border-style: double; */
+  padding-inline: 40px;
+  border-radius: 10px;
+  font-family: var(--ff-body);
+  font-size: 22px;
+  width: 45ch;
+}
+.add-select-comp {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
+
+.add-select-comp button {
+  padding: 7px;
+  border-radius: 25%;
+}
+
+.add-select-comp img {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* ----------------panels--------------------- */
+
+.panels {
+  padding: 50px;
+  display: flex;
+  justify-content: center;
+}
+.panels button{
+    padding: 2px;
+    width: 210px;
+}
+.panels * {
+  color: rgb(155, 154, 154);
+  background-color: white;
+  font-size: 1.5rem;
+  width: 14ch;
+  border: none;
+  padding: 2px;
+}
+.panels button:not(:last-child) {
+  border-style: none solid none none;
+  border-color: black;
+}
+.panels > *:hover,
+.panels > *:focus,
+.active > * {
+  color: black;
+  font-weight: 800;
+  font-size: 1.5rem;
+}
+/* .panels > button:hover,
+.panels > button:focus{
+    border-bottom: 2px solid black;
+    
+} */
+
+/* -------------------card-list------------------- */
+
+.card-list {
+  display: grid;
+  justify-content: center;
+  padding-bottom: 35px;
+}
+
+/* .card-list .card + .card {
+    margin-top: 1.25em;
+} */
+
+/* ---------------card component----------------------- */
+
+.card {
+  margin-top: 1.25em;
+  padding-block: 50px;
+  font-size: 1.75em;
+  width: 44ch;
+  border: 1px solid black;
+  border-radius: 30px;
+  position: relative;
+  height: 132px;
+}
+
+.card p {
+  padding-top: 20px;
+}
+.flex-container {
+  position: absolute;
+  top: 5px;
+  right: 20px;
+  display: flex;
+  gap: 10px;
+}
+
+.flex-container img {
+  height: 15px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+.flex-container button {
+  width: 32px;
+  height: 32px;
+  padding: 0px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+  border: 1px solid black;
+}
+
+.flex-container select {
+  font-size: 0.68em;
+  padding-block: 0.1em;
+  border-radius: 1em;
+  width: 15ch;
+  padding-left: 1.5ch;
+}
+.status{
+  position: absolute;
+  top:2px;
+  right: 88px;
+}
+
+.flex-container-2 {
+  position: absolute;
+  top: 13px;
+  left: 38px;
+}
+
+.flex-container-2 p {
+  padding: 0;
+  color: grey;
+  font-style: italic;
+  font-size: 0.70em;
+}
+/* 
+.grid {
+  padding-top: 10px;
+  display: grid;
+  grid-template-columns: 10px auto;
+} */
+.checkbox {
+  z-index: 1;
+  width: 20px;
+  position: absolute;
+  top: 15px;
+  left: 5px;
+}
+
+.editable {
+  padding-top: 10px;
+  width: 40ch;
+  border: none;
+  font-size: 1em;
+  text-align: center;
+  outline: none;
+}
+
+/*-----------------remove button-----------------*/
+.remove-button {
+  font-size: 2em;
+  padding: 10px 40px;
+  border-radius: 10px;
+  background-image: linear-gradient(rgb(255, 203, 203), red);
+  color: azure;
+  border: 2px ridge red;
+}
+
+.completed {
+  text-decoration: line-through;
+  color: grey;
+}
+
+/* custom messages */
+
+.cover-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  background-color: gray;
+  opacity: 0.3;
+}
+.cust-messages {
+  position: fixed;
+  top: 130px;
+  left: 0;
+  right: 0;
+  margin-left: auto;
+  margin-right: auto;
+  width: 65%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 20;
+  background-color: white;
+  height: 100px;
+  border: 4px solid;
+  border-radius: 25px;
+  padding: 20px;
+}
+
+.cust-messages div img {
+  width: 30px;
+  height: 30px;
+}
+.cust-messages button {
+  border-radius: 50%;
+  border: none;
+  background-color: white;
+  padding: 0;
+  height: 30px;
+  margin: 7px;
+  cursor: pointer;
+}
+.cust-messages p {
+  font-size: 1.35em;
+}
+
+.cust-img {
+  width: 50px;
+  height: 50px;
+}
+.hidden {
+  display: none;
+}
+
+.confirm {
+  border-color: red;
+}
+
+.alert-right {
+  border-color: green;
+}
+
+.alert-wrong {
+  border-color: red;
+}
+
+.panels > span{
+    font-size: 0.5rem;
+}
